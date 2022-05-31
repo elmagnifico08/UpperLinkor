@@ -125,6 +125,7 @@ public class ValidInput {
     }
 
     public void fire(char[][] fieldShips, char[][] fieldShots, int shipCounter) {
+        rankingShipsAndShots.showField(fieldShots);
         if (shipCounter < 17) {
             System.out.println("Strike your opponent's ship");
 
@@ -135,7 +136,6 @@ public class ValidInput {
                 String[] coordinates = input1.split("^[A-J]$");
                 int coor1 = (int) input1.charAt(0) - 'A';
                 int coor2 = Integer.parseInt(coordinates[0].substring(1)) - 1;
-                System.out.println(coor1 + " " + coor2);
                 checkInput(coor1, coor2, fieldShips, fieldShots, shipCounter);
 
             } else {
@@ -158,6 +158,7 @@ public class ValidInput {
                     (fieldShips[Math.min(coor1, 8) + 1][coor2] == '~' || fieldShips[Math.min(coor1, 8) + 1][coor2] == 'x') &&
                     (fieldShips[coor1][Math.min(coor2, 8) + 1] == '~' || fieldShips[coor1][Math.min(coor2, 8) + 1] == 'x')
             ) {
+
                 System.out.println("You destroyed ship");
             }
             System.out.println("You hit an enemy ship, shoot some more");

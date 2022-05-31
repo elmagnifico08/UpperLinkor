@@ -3,7 +3,7 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        Launch launch = new Launch();
-
+        Game game = new Game();
+        game.relaized();
     }
 }

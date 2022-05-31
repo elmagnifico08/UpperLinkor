@@ -25,8 +25,10 @@ public class Launch {
             } else {
                 if (countShipPlayer2.getShipCounter() != 17) {
                     countShipPlayer1.fire(player2.rankingShipsAndShots.getRankingShips(), player1.rankingShipsAndShots.getShotField(), countShipPlayer2.getShipCounter());
+                player1.showFieldShots();
                 }if (countShipPlayer1.getShipCounter() != 17) {
                     countShipPlayer2.fire(player1.rankingShipsAndShots.getRankingShips(), player2.rankingShipsAndShots.getShotField(), countShipPlayer1.getShipCounter());
+                player2.showFieldShots();
                 }
             }
         }
